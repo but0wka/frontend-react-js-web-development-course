@@ -5,11 +5,8 @@ function unicFn(initialArray) {
             uniqueArray.push(initialArray[i]);
         }
     }
-    console.log(uniqueArray);
+    return uniqueArray;
 }
 
-let array = [1, 2, 2, 3, 4, 4, 5];
-unicFn(array);
-
-let array2 = ["a", "b", "b", "c", "d", "d", "e"];
-unicFn(array2);
+let array = [2, 3, 1, 3, 3, 7];
+console.log(unicFn(array));

@@ -1,14 +1,15 @@
-function removeObj(arr, keyName, value) {
-    const result = [];
-    for (const obj of arr) {
-        if (!(keyName in obj) || obj[keyName] !== value) {
-            result.push(obj);
+function unicFn(initialArray) {
+    let uniqueArray = [];
+    for (let i = 0; i < initialArray.length; i++) {
+        if (uniqueArray.indexOf(initialArray[i]) === -1) {
+            uniqueArray.push(initialArray[i]);
         }
     }
-    return result;
+    console.log(uniqueArray);
 }
 
-const arr = [{ age: 1 }, { age: 2 }, { age: 2 }, { year: 2 }];
+let array = [2, 3, 1, 3, 3, 7];
+unicFn(array);
 
-console.log(removeObj(arr, "age", 2));
-console.log(removeObj(arr, "year", 2));
+let array2 = ["a", "b", "b", "c", "d", "d", "e"];
+unicFn(array2);
